@@ -1,0 +1,423 @@
+/* ==========
+FONTS
+========== */
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// font-family: "Anonymous Pro", monospace;
+// font-family: "Encode Sans Semi Expanded", sans-serif;
+
+/* ==========
+RESET
+========== */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* ==========
+VARIABLES
+========== */
+$line-height: 1.5;
+$spacing: 0.1rem;
+$border-radius: 0.5rem;
+$transition: all linear 0.3s;
+
+// temp ?
+$clr-white: #fff;
+$clr-1: #fffdfc;
+$clr-2: #f2e9e4;
+$clr-3: #c9ada7;
+$clr-4: #9a8c98;
+$clr-5: #464669;
+$clr-6: #22223b;
+$clr-accent: #3a3c68;
+$clr-accent-2: #f6bd60;
+$clr-accent-3: #cb769e;
+$clr-accent-4: #ffd9da;
+$clr-bcg: #f4f3f6;
+
+/* ==========
+MIXINS
+========== */
+@mixin max-width {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin p-x-container-sm {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@mixin p-x-container-lg {
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+/* ==========
+GLOBAL
+========== */
+h1,
+h2,
+h3,
+p,
+li,
+a {
+  line-height: $line-height;
+  letter-spacing: $spacing;
+}
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius;
+  transition: $transition;
+}
+a {
+  color: inherit;
+}
+// moved to projects ? (not sure if should stay there)
+// img {
+//   height: 60%;
+//   max-width: 100%;
+//   object-fit: cover;
+// }
+
+// layout
+.nav-container,
+.hero-container,
+.section-container,
+.footer-container {
+  @include p-x-container-sm;
+  @include max-width;
+}
+@media screen and (min-width: 768px) {
+  .nav-container,
+  .hero-container,
+  .section-container,
+  .footer-container {
+    @include p-x-container-lg;
+  }
+}
+
+// temp
+h1 {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: $clr-accent;
+}
+h2 {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-weight: 600;
+}
+h3 {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-weight: 600;
+}
+p,
+a {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+}
+// temp ? move to another section?
+.hero-title {
+  color: $clr-accent;
+}
+.hero-subtitle {
+  color: $clr-accent;
+}
+strong {
+  font-weight: inherit;
+  color: $clr-accent-2;
+}
+
+.section-title {
+  color: $clr-accent;
+  text-transform: capitalize;
+}
+.project-title {
+  color: $clr-accent-3;
+}
+
+/* ==========
+NAV
+========== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $clr-5;
+  color: $clr-1;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .nav-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+.nav-logo {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+  color: $clr-1;
+}
+.nav-list {
+  display: none;
+  color: $clr-1;
+}
+.nav-link {
+  transition: $transition;
+}
+.nav-link:hover {
+  color: $clr-accent-2;
+}
+.nav-link-contact {
+  border: 2px solid $clr-accent-2;
+  border-radius: $border-radius;
+  background-color: $clr-accent-2;
+  color: $clr-5;
+  padding: 0.75rem;
+  transition: $transition;
+}
+.nav-link-contact:hover {
+  background-color: transparent;
+  color: $clr-accent-2;
+}
+// nav toggler
+.nav-toggler {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.nav-toggler:hover {
+  background-color: $clr-6;
+}
+.togger-icon {
+  font-size: 1.5rem;
+  padding-top: 0.1rem;
+  color: $clr-1;
+}
+@media screen and (min-width: 768px) {
+  .nav-toggler {
+    display: none;
+  }
+  .nav-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4rem;
+  }
+}
+
+/* ==========
+HERO
+========== */
+.hero {
+  background-color: $clr-bcg;
+}
+.hero-container {
+  margin-top: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+@media screen and (min-width: 768px) {
+  .hero-container {
+    margin-top: 5.5rem;
+  }
+}
+
+// ANIMATION OF THE WAVING HAND
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-6deg);
+  }
+  30% {
+    transform: rotate(16deg);
+  }
+  40% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.waving-hand:hover {
+  animation: wave-animation 2.5s infinite;
+  transform-origin: 75% 75%;
+  // animation-play-state: running;
+}
+.waving-hand {
+  animation: wave-animation 2.5s 2; /* Change to speed up or slow down */
+  transform-origin: 80% 75%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+  cursor: pointer;
+}
+// END OF ANIMATION OF THE WAVING HAND
+
+.hero-subtitle {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  line-height: 2;
+}
+@media screen and (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+}
+
+/* ==========
+SECTIONS
+========== */
+main {
+}
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.section-container {
+}
+.section-title {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.section-title::before,
+.section-title::after {
+  content: '';
+  width: 1rem;
+  height: 3px;
+  background-color: $clr-5;
+}
+
+// about section
+.section-about {
+  background-color: $clr-white;
+}
+// projects section
+.section-projects {
+  background-color: $clr-bcg;
+}
+// contact section
+.section-contact {
+  background-color: $clr-white;
+}
+
+/* ==========
+PROJECTS
+========== */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+.project {
+  // display: flex;
+  // flex-direction: column;
+
+  // temp
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  gap: 1rem;
+  border-radius: $border-radius;
+  padding: 2rem 1rem;
+  background-color: $clr-white;
+  box-shadow: 0px 6px 22px -14px rgba(74, 78, 105, 1);
+}
+// temp
+.image-wrapper {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3/2;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.project-btn {
+  background-color: transparent;
+  border: 2px solid $clr-accent-3;
+  color: $clr-accent-3;
+}
+.project-btn:hover {
+  background-color: $clr-accent-3;
+  color: $clr-1;
+}
+
+/* ==========
+FOOTER
+========== */
+.footer {
+  background-color: $clr-5;
+  color: $clr-1;
+}
+.footer-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-icons {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+.footer-info {
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 576px) {
+  .footer-icons {
+    font-size: 2rem;
+  }
+  .footer-info {
+    font-size: 1rem;
+  }
+}
