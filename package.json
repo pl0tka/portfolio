@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch styles.scss styles.css",
+    "compile:sass": "sass src/styles/sass/index.scss src/styles/css/styles.css -w",
     "start": "parcel public/index.html --open"
   },
   "repository": {
