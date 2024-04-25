@@ -1,7 +1,18 @@
 import React from 'react';
+import Nav from './components/Nav';
+import Hero from './components/Hero';
+import Sections from './components/Sections';
+import Footer from './components/Footer';
 
 function App() {
-  return <h1>App</h1>;
+  return (
+    <div>
+      <Nav />
+      <Hero />
+      <Sections />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
