@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass styles.scss styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pl0tka/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pl0tka/portfolio/issues"
+  },
+  "homepage": "https://github.com/pl0tka/portfolio#readme",
+  "devDependencies": {
+    "sass": "^1.74.1"
+  }
+}
