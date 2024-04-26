@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass src/styles/sass/index.scss src/styles/css/styles.css -w",
+    "start": "parcel public/index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pl0tka/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pl0tka/portfolio/issues"
+  },
+  "homepage": "https://github.com/pl0tka/portfolio#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.72.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
