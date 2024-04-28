@@ -2,7 +2,7 @@ import React from 'react';
 
 function Hero() {
   return (
-    <header className="hero">
+    <section className="hero">
       <div className="hero-container">
         <h1 className="hero-title">
           Hi, my name is Nasta
@@ -13,7 +13,7 @@ function Hero() {
           living in Warsaw
         </h2>
       </div>
-    </header>
+    </section>
   );
 }
 
