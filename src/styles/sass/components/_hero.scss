@@ -1,0 +1,84 @@
+.hero {
+  background-color: $clr-bcg;
+}
+.hero-container {
+  margin-top: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+@media screen and (min-width: 768px) {
+  .hero-container {
+    margin-top: 5.5rem;
+  }
+}
+
+// ANIMATION OF THE WAVING HAND
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-6deg);
+  }
+  30% {
+    transform: rotate(16deg);
+  }
+  40% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.waving-hand:hover {
+  animation: wave-animation 2.5s infinite;
+  transform-origin: 75% 75%;
+  // animation-play-state: running;
+}
+.waving-hand {
+  animation: wave-animation 2.5s 2; /* Change to speed up or slow down */
+  transform-origin: 80% 75%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+  cursor: pointer;
+}
+// END OF ANIMATION OF THE WAVING HAND
+
+.hero-subtitle {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  line-height: 2;
+}
+@media screen and (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+}
+
+// temp ? move to another section?
+.hero-title {
+  color: $clr-accent;
+}
+.hero-subtitle {
+  color: $clr-accent;
+}
+strong {
+  font-weight: inherit;
+  color: $clr-accent-2;
+}

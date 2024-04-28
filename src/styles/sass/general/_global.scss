@@ -1,0 +1,63 @@
+h1,
+h2,
+h3,
+p,
+li,
+a {
+  line-height: $line-height;
+  letter-spacing: $spacing;
+}
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius;
+  transition: $transition;
+}
+a {
+  color: inherit;
+}
+
+// layout
+.nav-container,
+.hero-container,
+.section-container,
+.footer-container {
+  @include p-x-container-sm;
+  @include max-width;
+}
+@media screen and (min-width: 768px) {
+  .nav-container,
+  .hero-container,
+  .section-container,
+  .footer-container {
+    @include p-x-container-lg;
+  }
+}
+
+// temp
+h1 {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: $clr-accent;
+}
+h2 {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-weight: 600;
+}
+h3 {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-weight: 600;
+}
+p,
+a {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+}
+
+.section-title {
+  color: $clr-accent;
+  text-transform: capitalize;
+}
+.project-title {
+  color: $clr-accent-3;
+}

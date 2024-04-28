@@ -1,0 +1,28 @@
+.footer {
+  background-color: $clr-5;
+  color: $clr-1;
+}
+.footer-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-icons {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+.footer-info {
+  font-size: 0.75rem;
+}
+@media screen and (min-width: 576px) {
+  .footer-icons {
+    font-size: 2rem;
+  }
+  .footer-info {
+    font-size: 1rem;
+  }
+}
