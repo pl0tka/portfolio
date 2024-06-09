@@ -1,8 +1,14 @@
 import React from 'react';
 
-function Nav() {
+function Nav({ isShown }) {
+  let navClassShow = '';
+
+  if (isShown) {
+    navClassShow = 'nav-show';
+  }
+
   return (
-    <nav className="nav">
+    <nav className={`nav ${navClassShow}`}>
       <ul className="nav-list">
         <li className="nav-list-item">
           <a href="#about">about me</a>

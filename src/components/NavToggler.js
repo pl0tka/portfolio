@@ -1,9 +1,13 @@
 import React from 'react';
 
-function NavToggler() {
+function NavToggler({ onToggle, isShown }) {
+  const handleClick = () => {
+    onToggle(!isShown);
+  };
+
   return (
-    <button className="nav-toggler">
-      <i className="togger-icon fa-solid fa-bars"></i>
+    <button onClick={handleClick} className="header-toggler">
+      <i className="header-toggler-icon fa-solid fa-bars"></i>
     </button>
   );
 }
