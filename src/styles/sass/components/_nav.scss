@@ -1,76 +1,61 @@
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: $clr-5;
-  color: $clr-1;
-}
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .nav-container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  @include md-screen {
+    display: block;
+    height: auto;
+    overflow: visible;
   }
-}
-.nav-logo {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  font-weight: 700;
-  color: $clr-1;
-}
-.nav-list {
-  display: none;
-  color: $clr-1;
-}
-.nav-link {
-  transition: $transition;
-}
-.nav-link:hover {
-  color: $clr-accent-2;
-}
-.nav-link-contact {
-  border: 2px solid $clr-accent-2;
-  border-radius: $border-radius;
-  background-color: $clr-accent-2;
-  color: $clr-5;
-  padding: 0.75rem;
-  transition: $transition;
-}
-.nav-link-contact:hover {
-  background-color: transparent;
-  color: $clr-accent-2;
-}
-// nav toggler
-.nav-toggler {
-  width: 3rem;
-  height: 3rem;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-.nav-toggler:hover {
-  background-color: $clr-6;
-}
-.togger-icon {
-  font-size: 1.5rem;
-  padding-top: 0.1rem;
-  color: $clr-1;
-}
-@media screen and (min-width: 768px) {
-  .nav-toggler {
-    display: none;
+
+  &-show {
+    display: block;
+    height: 10rem;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
   }
-  .nav-list {
+
+  &-list {
     display: flex;
-    justify-content: flex-end;
-    gap: 4rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    color: $clr-1;
+
+    @include md-screen {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 4rem;
+    }
+  }
+
+  &-list-show {
+    display: flex;
+  }
+
+  &-list-item {
+    transition: $transition;
+
+    &:hover {
+      color: $clr-accent-2;
+    }
+  }
+
+  &-link-contact {
+    border: 2px solid $clr-accent-2;
+    border-radius: $border-radius;
+    background-color: $clr-accent-2;
+    color: $clr-5;
+    padding: 0.75rem;
+    transition: $transition;
+
+    &:hover {
+      background-color: transparent;
+      color: $clr-accent-2;
+    }
   }
 }
