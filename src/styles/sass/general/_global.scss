@@ -18,20 +18,12 @@ a {
 }
 
 // layout
-.nav-container,
+.header-container,
 .hero-container,
 .section-container,
 .footer-container {
-  @include p-x-container-sm;
+  @include container-padding-x;
   @include max-width;
-}
-@media screen and (min-width: 768px) {
-  .nav-container,
-  .hero-container,
-  .section-container,
-  .footer-container {
-    @include p-x-container-lg;
-  }
 }
 
 // temp
