@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Nav({ isShown }) {
-  let navClassShow = '';
+  const [isWideScreen, setIsWideScreen] = useState(false);
 
-  if (isShown) {
-    navClassShow = 'nav-show';
-  }
+  useEffect(() => {
+    // create a media query listener for screen widths at least 768px
+    const mediaWatcher = window.matchMedia('(min-width: 768px)');
+    // update the state based on the media query match
+    const updateIsWideScreen = (e) => {
+      setIsWideScreen(e.matches);
+    };
+
+    mediaWatcher.addEventListener('change', updateIsWideScreen);
+    // set the initial state based on the current screen width
+    updateIsWideScreen(mediaWatcher);
+
+    return () => {
+      mediaWatcher.removeEventListener('change', updateIsWideScreen);
+    };
+  }, []);
+
+  const navClassShow = isShown && !isWideScreen ? 'nav-show' : '';
 
   return (
     <nav className={`nav ${navClassShow}`}>
