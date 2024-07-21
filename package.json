@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile:sass": "sass src/styles/sass/index.scss src/styles/css/styles.css -w",
+    "compile:sass:prod": "sass src/styles/sass/index.scss src/styles/css/styles.css -w",
     "start": "parcel public/index.html --open",
-    "build": "parcel build public/index.html"
+    "build": "npm run compile:sass:prod && parcel build public/index.html"
   },
   "repository": {
     "type": "git",
