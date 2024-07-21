@@ -1,34 +1,22 @@
 .section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-.section-container {
-}
-.section-title {
-  margin-bottom: 3rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-.section-title::before,
-.section-title::after {
-  content: '';
-  width: 1rem;
-  height: 3px;
-  background-color: $clr-5;
-}
+  padding-top: $padding-lg;
+  padding-bottom: $padding-lg;
 
-// about section
-.section-about {
-  background-color: $clr-white;
-}
-// projects section
-.section-projects {
-  background-color: $clr-bcg;
-}
-// contact section
-.section-contact {
-  background-color: $clr-white;
+  &-title {
+    color: $clr-primary-accent;
+    margin-bottom: $title-margin-bottom;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: $gap-sm;
+
+    &::before,
+    &::after {
+      content: '';
+      width: $title-line-width;
+      height: $title-line-height;
+      background-color: $clr-primary;
+    }
+  }
 }
