@@ -39,15 +39,16 @@
   &-list-item {
     text-transform: uppercase;
     transition: $nav-transition;
-    border-bottom: transparent;
+    font-weight: $font-weight-medium;
+    border-bottom: border-style(transparent);
 
     &:hover {
-      color: $clr-secondary;
+      border-bottom-color: $clr-primary;
     }
   }
 
   &-link-contact {
-    border: 2px solid $clr-secondary;
+    border: border-style($clr-secondary);
     border-radius: $border-radius;
     background-color: $clr-secondary;
     color: $clr-primary;
@@ -55,8 +56,9 @@
     transition: $transition;
 
     &:hover {
-      background-color: transparent;
+      background-color: $clr-primary;
       color: $clr-secondary;
+      border-color: $clr-primary;
     }
   }
 }
