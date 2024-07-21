@@ -12,13 +12,11 @@ function Header() {
 
   return (
     <header className="header">
-      <div className="header-container">
-        <div className="header-logo-toggler">
-          <p className="header-logo">huseva</p>
-          <NavToggler onToggle={toggleNav} isShown={showNav} />
-        </div>
-        <Nav isShown={showNav} />
+      <div className="header-logo-toggler">
+        <p className="header-logo">huseva</p>
+        <NavToggler onToggle={toggleNav} isShown={showNav} />
       </div>
+      <Nav isShown={showNav} />
     </header>
   );
 }

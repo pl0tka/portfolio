@@ -36,11 +36,9 @@ function ProjectsList() {
   });
 
   return (
-    <section id="projects" className="section section-projects">
-      <div className="section-container">
-        <h2 className="section-title">My projects</h2>
-        <div className="projects-container">{renderedProjects}</div>
-      </div>
+    <section id="projects" className="section">
+      <h2 className="section-title">my projects</h2>
+      <div className="projects">{renderedProjects}</div>
     </section>
   );
 }
