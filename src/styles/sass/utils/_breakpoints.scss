@@ -31,3 +31,8 @@ $breakpoints: (
     @content;
   }
 }
+@mixin sm-height {
+  @media (max-height: map-get($breakpoints, 'sm')) {
+    @content;
+  }
+}
