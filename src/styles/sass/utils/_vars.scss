@@ -8,12 +8,15 @@ $nav-transition: all 0.3s ease-in-out;
 // paddings
 $btn-padding: 0.5rem 1rem;
 $link-contact-padding: 0.75rem;
+$project-element-padding: 0.1rem 0.5rem;
+$project-btn-padding-default: 0.1rem 0;
 $padding-sm: 1rem;
 $padding-md: 2rem;
 $padding-lg: 3rem;
 
 // gaps
 $nav-gap: 4rem;
+$project-technologies-gap: 0.3rem;
 $gap-sm: 1rem;
 $gap-md: 2rem;
 
@@ -23,6 +26,10 @@ $clr-light: #f4f3f6; /* background */
 $clr-primary: #464669; /* main text, footer background */
 $clr-primary-accent: #3a3c68; /* hero text and section titles */
 $clr-secondary: #f6bd60; /* accent color for some btns */
+$clr-secondary-light: lighten(
+  $color: $clr-secondary,
+  $amount: 15%,
+); /* project technologies */
 
 // breakpoints
 $xs-screen: 0;
@@ -30,6 +37,9 @@ $sm-screen: 576px;
 $md-screen: 768px;
 $lg-screen: 992px;
 $xl-screen: 1200px;
+
+// box shadow
+$box-shadow-base: 0px 6px 22px -14px $clr-primary;
 
 // *** TEXT & FONTS ***
 // base font size
@@ -47,6 +57,7 @@ $font-size-hero-lg: $font-size-base * 3.5;
 
 // font weight
 $font-weight-light: 300;
+$font-weight-medium: 500;
 $font-weight-bold: 600;
 $font-weight-extra-bold: 700;
 
@@ -71,3 +82,6 @@ $nav-show-height: 10rem;
 $title-margin-bottom: 2rem;
 $title-line-width: 1rem;
 $title-line-height: 1.5px;
+
+// project screenshot ratio
+$img-ratio: 3/2;
