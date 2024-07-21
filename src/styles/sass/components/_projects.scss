@@ -1,45 +1,93 @@
-.projects-container {
+.projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 2rem;
-}
-.project {
-  // display: flex;
-  // flex-direction: column;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  gap: $gap-md;
+  justify-content: center;
 
-  // temp
+  @include md-screen {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+    @include sm-height {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+    }
+  }
+}
+
+.project {
   display: grid;
   grid-template-rows: auto 1fr auto;
-
-  gap: 1rem;
+  gap: $gap-sm;
   border-radius: $border-radius;
-  padding: 2rem 1rem;
+  padding: $padding-md $padding-sm;
   background-color: $clr-white;
-  box-shadow: 0px 6px 22px -14px rgba(74, 78, 105, 1);
-}
-// temp
-.image-wrapper {
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 3/2;
-}
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  box-shadow: $box-shadow-base;
 
-.project-btns {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-.project-btn {
-  background-color: transparent;
-  border: 2px solid $clr-accent-3;
-  color: $clr-accent-3;
-}
-.project-btn:hover {
-  background-color: $clr-accent-3;
-  color: $clr-1;
+  &-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+    color: $clr-primary;
+  }
+
+  &-title {
+    font-size: $font-size-lg;
+    text-transform: lowercase;
+    font-weight: $font-weight-bold;
+  }
+
+  &-description {
+    font-weight: $font-weight-light;
+  }
+
+  &-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $project-technologies-gap;
+  }
+
+  &-technology {
+    background-color: $clr-secondary-light;
+    color: $clr-primary;
+    border-radius: $border-radius;
+    padding: $project-element-padding;
+    transition: $transition;
+    font-weight: $font-weight-medium;
+  }
+
+  &-image-wrapper {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: $img-ratio;
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-btns-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: $gap-sm;
+  }
+
+  &-btn {
+    font-size: $font-size-sm;
+    background-color: transparent;
+    color: $clr-primary;
+    text-transform: uppercase;
+    font-weight: $font-weight-medium;
+    border: border-style(transparent);
+    border-bottom-color: $clr-primary;
+    border-radius: 0;
+    padding: $project-btn-padding-default;
+
+    &:hover {
+      background-color: $clr-primary;
+      color: $clr-secondary;
+      border: border-style($clr-primary);
+      border-radius: $border-radius;
+      padding: $project-element-padding;
+    }
+  }
 }
