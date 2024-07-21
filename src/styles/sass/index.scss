@@ -2,14 +2,15 @@
 @import './utils/vars';
 @import './utils/breakpoints';
 @import './utils/mixins';
+@import './layout/layout';
 
 @import './general/fonts';
 @import './general/global';
 
-@import './components/button';
 @import './components/header';
 @import './components/nav';
 @import './components/hero';
 @import './components/section';
+@import './components/about';
 @import './components/projects';
 @import './components/footer';

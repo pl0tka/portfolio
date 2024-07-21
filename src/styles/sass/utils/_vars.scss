@@ -1,21 +1,28 @@
-$line-height: 1.5;
-$spacing: 0.1rem;
 $border-radius: 0.5rem;
-$transition: all linear 0.3s;
+$max-width-page: 1980px;
 
-// temp ?
+// transition
+$transition: all 0.2s ease-in;
+$nav-transition: all 0.3s ease-in-out;
+
+// paddings
+$btn-padding: 0.5rem 1rem;
+$link-contact-padding: 0.75rem;
+$padding-sm: 1rem;
+$padding-md: 2rem;
+$padding-lg: 3rem;
+
+// gaps
+$nav-gap: 4rem;
+$gap-sm: 1rem;
+$gap-md: 2rem;
+
+// colors
 $clr-white: #fff;
-$clr-1: #fffdfc;
-$clr-2: #f2e9e4;
-$clr-3: #c9ada7;
-$clr-4: #9a8c98;
-$clr-5: #464669;
-$clr-6: #22223b;
-$clr-accent: #3a3c68;
-$clr-accent-2: #f6bd60;
-$clr-accent-3: #cb769e;
-$clr-accent-4: #ffd9da;
-$clr-bcg: #f4f3f6;
+$clr-light: #f4f3f6; /* background */
+$clr-primary: #464669; /* main text, footer background */
+$clr-primary-accent: #3a3c68; /* hero text and section titles */
+$clr-secondary: #f6bd60; /* accent color for some btns */
 
 // breakpoints
 $xs-screen: 0;
@@ -23,3 +30,44 @@ $sm-screen: 576px;
 $md-screen: 768px;
 $lg-screen: 992px;
 $xl-screen: 1200px;
+
+// *** TEXT & FONTS ***
+// base font size
+$font-size-base: 1rem;
+
+// scaled font sizes
+$font-size-xs: $font-size-base * 0.75;
+$font-size-sm: $font-size-base;
+$font-size-md: $font-size-base * 1.25;
+$font-size-lg: $font-size-base * 1.5;
+$font-size-xl: $font-size-base * 2;
+$font-size-hero-sm: $font-size-base * 2.25;
+$font-size-hero-md: $font-size-base * 2.75;
+$font-size-hero-lg: $font-size-base * 3.5;
+
+// font weight
+$font-weight-light: 300;
+$font-weight-bold: 600;
+$font-weight-extra-bold: 700;
+
+// letter spacing
+$letter-spacing-sm: 0.075rem;
+$letter-spacing-md: 0.1rem;
+$letter-spacing-lg: 0.5rem;
+
+// line height
+$line-height-md: 1.5;
+$line-height-lg: 1.5;
+
+// *** COMPONENTS ***
+// hero
+$hero-spacing-top: 10rem;
+$hero-spacing-bottom: 3rem;
+
+// nav
+$nav-show-height: 10rem;
+
+// section title
+$title-margin-bottom: 2rem;
+$title-line-width: 1rem;
+$title-line-height: 1.5px;
