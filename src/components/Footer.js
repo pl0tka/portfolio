@@ -1,13 +1,33 @@
 import React from 'react';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa6';
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-icons">
-        <i className="fa-brands fa-linkedin"></i>
-        <i className="fa-solid fa-envelope"></i>
+        <a
+          className="footer-link"
+          href="https://github.com/pl0tka"
+          target="_blank"
+        >
+          <FaGithub />
+        </a>
+        <a
+          className="footer-link"
+          href="https://www.linkedin.com/in/anastasiahuseva/"
+          target="_blank"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          className="footer-link"
+          href="mailto:huseva.a@gmail.com"
+          target="_blank"
+        >
+          <FaEnvelope />
+        </a>
       </div>
-      <p className="footer-info">&copy; 2024 Huseva. All rights reserved.</p>
+      <p className="footer-info">Nasta Huseva | &copy; 2024</p>
     </footer>
   );
 }
