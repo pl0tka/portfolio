@@ -3,22 +3,17 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: $clr-5;
-  color: $clr-1;
+  color: $clr-primary;
+  padding-top: $padding-sm;
+  padding-bottom: $padding-sm;
+  background-color: $clr-light;
 
-  &-container {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
-    @include md-screen {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-      // if container is flex from the beginning (on the small screen), logo & toggler jumps when toggling
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+  @include md-screen {
+    // if header is flex from the beginning (on the small screen), logo & toggler jumps when toggling
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   &-logo-toggler {
@@ -28,11 +23,10 @@
   }
 
   &-logo {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
-    font-weight: 700;
-    color: $clr-1;
+    font-size: $font-size-lg;
+    letter-spacing: $letter-spacing-lg;
+    font-weight: $font-weight-light;
+    color: $clr-primary;
   }
 
   &-toggler {
@@ -41,19 +35,22 @@
     padding: 0;
     border: none;
     background-color: transparent;
+    color: $clr-primary;
 
     @include md-screen {
       display: none;
     }
 
     &:hover {
-      background-color: $clr-6;
+      background-color: $clr-primary;
+      color: $clr-light;
     }
   }
 
   &-toggler-icon {
-    font-size: 1.5rem;
+    font-size: $font-size-lg;
+    // icon looks asymmetric without padding
     padding-top: 0.1rem;
-    color: $clr-1;
+    color: inherit;
   }
 }

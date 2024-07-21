@@ -2,7 +2,7 @@
   display: block;
   height: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: $nav-transition;
 
   @include md-screen {
     display: block;
@@ -12,9 +12,8 @@
 
   &-show {
     display: block;
-    height: 10rem;
+    height: $nav-show-height;
     width: 100%;
-    transition: all 0.3s ease-in-out;
   }
 
   &-list {
@@ -23,13 +22,13 @@
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    color: $clr-1;
+    color: $clr-primary;
 
     @include md-screen {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      gap: 4rem;
+      gap: $nav-gap;
     }
   }
 
@@ -38,24 +37,26 @@
   }
 
   &-list-item {
-    transition: $transition;
+    text-transform: uppercase;
+    transition: $nav-transition;
+    border-bottom: transparent;
 
     &:hover {
-      color: $clr-accent-2;
+      color: $clr-secondary;
     }
   }
 
   &-link-contact {
-    border: 2px solid $clr-accent-2;
+    border: 2px solid $clr-secondary;
     border-radius: $border-radius;
-    background-color: $clr-accent-2;
-    color: $clr-5;
-    padding: 0.75rem;
+    background-color: $clr-secondary;
+    color: $clr-primary;
+    padding: $link-contact-padding;
     transition: $transition;
 
     &:hover {
       background-color: transparent;
-      color: $clr-accent-2;
+      color: $clr-secondary;
     }
   }
 }
