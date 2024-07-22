@@ -2,6 +2,8 @@ import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa6';
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer-icons">
@@ -27,7 +29,7 @@ function Footer() {
           <FaEnvelope />
         </a>
       </div>
-      <p className="footer-info">Nasta Huseva | &copy; 2024</p>
+      <p className="footer-info">Nasta Huseva | &copy; {currentYear}</p>
     </footer>
   );
 }
