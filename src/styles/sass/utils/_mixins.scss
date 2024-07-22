@@ -1,0 +1,71 @@
+// container
+@mixin containter-max-width {
+  max-width: $max-width-page;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin container-padding-x {
+  padding-right: $padding-sm;
+  padding-left: $padding-sm;
+
+  @include md-screen {
+    padding-right: $padding-md * 2;
+    padding-left: $padding-md * 2;
+  }
+}
+
+// enabling hover effects for devices with hover support and fine pointers
+@mixin hover-fine-pointer {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+// focus styles
+@mixin focus-default {
+  &:focus {
+    outline-color: $clr-secondary;
+    background-color: $clr-secondary-light;
+    color: $clr-primary;
+  }
+}
+
+@mixin focus-dark {
+  &:focus {
+    outline-color: $clr-secondary;
+    background-color: $clr-primary;
+    color: $clr-secondary;
+  }
+}
+
+// TEXT
+// hero
+@mixin text-hero-primary {
+  font-size: $font-size-hero-sm;
+  font-weight: $font-weight-light;
+  color: $clr-primary-accent;
+  text-transform: uppercase;
+  margin: auto;
+
+  @include sm-screen {
+    max-width: 80%;
+  }
+
+  @include md-screen {
+    font-size: $font-size-hero-md;
+    max-width: 70%;
+  }
+
+  @include lg-screen {
+    font-size: $font-size-hero-lg;
+    max-width: 800px;
+  }
+}
+
+@mixin text-hero-accent {
+  text-transform: capitalize;
+  font-weight: $font-weight-bold;
+  font-style: italic;
+  color: $clr-primary-accent;
+}

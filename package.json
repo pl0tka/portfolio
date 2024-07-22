@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile:sass": "sass src/styles/sass/index.scss src/styles/css/styles.css -w",
-    "start": "parcel public/index.html --open"
+    "compile:sass:prod": "sass src/styles/sass/index.scss src/styles/css/styles.css -w",
+    "start": "parcel public/index.html --open",
+    "build": "npm run compile:sass:prod && parcel build public/index.html"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1"
   }
 }

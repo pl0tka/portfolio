@@ -1,0 +1,89 @@
+$border-radius: 0.5rem;
+$max-width-page: 1980px;
+
+// transition
+$transition: all 0.2s ease-in;
+$nav-transition: all 0.3s ease-in-out;
+
+// paddings
+$btn-padding: 0.5rem 1rem;
+$link-contact-padding: 0.75rem;
+$project-element-padding: 0.1rem 0.5rem;
+$project-btn-padding-default: 0.1rem 0;
+$padding-xs: 0.5rem;
+$padding-sm: 1rem;
+$padding-md: 2rem;
+$padding-lg: 3rem;
+
+// gaps
+$nav-gap: 4rem;
+$project-technologies-gap: 0.3rem;
+$gap-xs: 0.5rem;
+$gap-sm: 1rem;
+$gap-md: 2rem;
+
+// colors
+$clr-white: #fff;
+$clr-light: #f4f3f6; /* background */
+$clr-primary: #464669; /* main text, footer background */
+$clr-primary-accent: #3a3c68; /* hero text and section titles */
+$clr-secondary: #f6bd60; /* accent color for some btns */
+$clr-secondary-light: lighten(
+  $color: $clr-secondary,
+  $amount: 15%,
+); /* project technologies */
+
+// breakpoints
+$xs-screen: 0;
+$sm-screen: 576px;
+$md-screen: 768px;
+$lg-screen: 992px;
+$xl-screen: 1200px;
+
+// box shadow
+$box-shadow-base: 0px 6px 22px -14px $clr-primary;
+
+// *** TEXT & FONTS ***
+// base font size
+$font-size-base: 1rem;
+
+// scaled font sizes
+$font-size-xs: $font-size-base * 0.75;
+$font-size-sm: $font-size-base;
+$font-size-md: $font-size-base * 1.25;
+$font-size-lg: $font-size-base * 1.5;
+$font-size-xl: $font-size-base * 2;
+$font-size-hero-sm: $font-size-base * 2.25;
+$font-size-hero-md: $font-size-base * 2.75;
+$font-size-hero-lg: $font-size-base * 3.5;
+
+// font weight
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+$font-weight-extra-bold: 700;
+
+// letter spacing
+$letter-spacing-sm: 0.075rem;
+$letter-spacing-md: 0.1rem;
+$letter-spacing-lg: 0.5rem;
+
+// line height
+$line-height-md: 1.5;
+$line-height-lg: 1.5;
+
+// *** COMPONENTS ***
+// hero
+$hero-spacing-top: 10rem;
+$hero-spacing-bottom: 3rem;
+
+// nav
+$nav-show-height: 10rem;
+
+// section title
+$title-margin-bottom: 2rem;
+$title-line-width: 1rem;
+$title-line-height: 1.5px;
+
+// project screenshot ratio
+$img-ratio: 3/2;

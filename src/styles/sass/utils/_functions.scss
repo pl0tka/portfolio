@@ -1,0 +1,4 @@
+// border style
+@function border-style($color) {
+  @return 1px solid #{$color};
+}

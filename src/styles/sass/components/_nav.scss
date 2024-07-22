@@ -1,0 +1,74 @@
+.nav {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  transition: $nav-transition;
+  // nav elements should not be focusable when nav is not open
+  visibility: hidden;
+
+  @include md-screen {
+    display: block;
+    height: auto;
+    overflow: visible;
+    visibility: visible;
+  }
+
+  &-show {
+    display: block;
+    height: $nav-show-height;
+    width: 100%;
+    visibility: visible;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    color: $clr-primary;
+
+    @include md-screen {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: $nav-gap;
+    }
+  }
+
+  &-list-show {
+    display: flex;
+  }
+
+  &-list-item {
+    text-transform: uppercase;
+    transition: $nav-transition;
+    font-weight: $font-weight-medium;
+    border-bottom: border-style(transparent);
+
+    @include hover-fine-pointer {
+      &:hover {
+        border-bottom-color: $clr-primary;
+      }
+    }
+  }
+
+  &-link-contact {
+    border: border-style($clr-secondary);
+    border-radius: $border-radius;
+    background-color: $clr-secondary;
+    color: $clr-primary;
+    padding: $link-contact-padding;
+    transition: $transition;
+
+    @include hover-fine-pointer {
+      &:hover {
+        background-color: $clr-primary;
+        color: $clr-secondary;
+        border-color: $clr-primary;
+      }
+    }
+
+    @include focus-dark;
+  }
+}

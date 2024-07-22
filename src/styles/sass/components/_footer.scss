@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $clr-primary;
+  color: $clr-light;
+  padding-top: $padding-md;
+  padding-bottom: $padding-sm;
+  gap: $gap-xs;
+
+  &-icons {
+    display: flex;
+    justify-content: center;
+    gap: $gap-sm;
+    font-size: $font-size-sm;
+
+    @include sm-screen {
+      font-size: $font-size-md;
+    }
+  }
+
+  &-link {
+    line-height: 0;
+    transition: $transition;
+
+    @include hover-fine-pointer {
+      &:hover {
+        color: $clr-secondary;
+      }
+    }
+  }
+
+  &-info {
+    font-size: $font-size-xs;
+
+    @include sm-screen {
+      font-size: $font-size-sm;
+    }
+  }
+}

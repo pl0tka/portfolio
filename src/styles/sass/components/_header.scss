@@ -1,0 +1,63 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: $clr-primary;
+  padding-top: $padding-xs;
+  padding-bottom: $padding-xs;
+  background-color: $clr-light;
+
+  @include md-screen {
+    // if header is flex from the beginning (on the small screen), logo & toggler jumps when toggling
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding-top: $padding-sm;
+    padding-bottom: $padding-sm;
+  }
+
+  &-logo-toggler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    font-size: $font-size-lg;
+    letter-spacing: $letter-spacing-lg;
+    font-weight: $font-weight-light;
+    color: $clr-primary;
+  }
+
+  &-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: $clr-primary;
+
+    @include md-screen {
+      display: none;
+    }
+
+    @include hover-fine-pointer {
+      &:hover {
+        background-color: $clr-primary;
+        color: $clr-secondary;
+      }
+    }
+
+    @include focus-dark;
+  }
+
+  &-toggler-icon {
+    font-size: $font-size-lg;
+    color: inherit;
+  }
+}

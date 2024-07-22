@@ -1,0 +1,12 @@
+.hero {
+  padding-top: $hero-spacing-top;
+  padding-bottom: $hero-spacing-bottom;
+
+  &-title {
+    @include text-hero-primary;
+  }
+
+  &-title-accent {
+    @include text-hero-accent;
+  }
+}

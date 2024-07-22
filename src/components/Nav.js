@@ -1,27 +1,44 @@
 import React from 'react';
 
-function Nav() {
+function Nav({ isShown, onClose }) {
+  const navClassShow = isShown ? 'nav-show' : '';
+
+  // smooth scrolling to the correct section with improved offset height
+  const handleClick = (e, targetId) => {
+    e.preventDefault();
+    const navHeight = 15;
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - navHeight,
+        behavior: 'smooth',
+      });
+    }
+    // remove focus from the element
+    e.target.blur();
+    // close nav
+    onClose();
+  };
+
   return (
-    <nav className="nav">
-      <div className="nav-container">
-        <p className="nav-logo">huseva</p>
-        <ul className="nav-list">
-          <li className="nav-link">
-            <a href="#about">about me</a>
-          </li>
-          <li className="nav-link">
-            <a href="#projects">my projects</a>
-          </li>
-          <li className="nav-link">
-            <a className="nav-link-contact" href="mailto:huseva.a@gmail.com">
-              get in touch
-            </a>
-          </li>
-        </ul>
-        <button className="nav-toggler">
-          <i className="togger-icon fa-solid fa-bars"></i>
-        </button>
-      </div>
+    <nav className={`nav ${navClassShow}`}>
+      <ul className="nav-list">
+        <li className="nav-list-item">
+          <a href="#" onClick={(e) => handleClick(e, 'about')}>
+            about me
+          </a>
+        </li>
+        <li className="nav-list-item">
+          <a href="#" onClick={(e) => handleClick(e, 'projects')}>
+            my projects
+          </a>
+        </li>
+        <li className="nav-list-item">
+          <a className="nav-link-contact" href="mailto:huseva.a@gmail.com">
+            get in touch
+          </a>
+        </li>
+      </ul>
     </nav>
   );
 }

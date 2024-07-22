@@ -1,0 +1,30 @@
+* {
+  font-family: inherit;
+}
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: $clr-light;
+}
+h1,
+h2,
+h3 {
+  line-height: $line-height-md;
+  letter-spacing: $letter-spacing-sm;
+}
+p,
+li,
+a {
+  line-height: $line-height-lg;
+  letter-spacing: $letter-spacing-md;
+}
+a {
+  color: inherit;
+  @include focus-default;
+}
+button {
+  cursor: pointer;
+  padding: $btn-padding;
+  border-radius: $border-radius;
+  transition: $transition;
+  border: none;
+}

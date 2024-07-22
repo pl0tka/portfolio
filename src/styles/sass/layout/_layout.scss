@@ -1,0 +1,6 @@
+.header,
+.hero,
+.section {
+  @include container-padding-x;
+  @include containter-max-width;
+}
