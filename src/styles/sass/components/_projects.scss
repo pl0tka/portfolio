@@ -5,10 +5,14 @@
   justify-content: center;
 
   @include md-screen {
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     @include sm-height {
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
+  }
+
+  @include lg-screen {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
