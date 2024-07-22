@@ -24,13 +24,13 @@ function Project({ project }) {
       </div>
       <div className="project-btns-wrapper">
         {/* add tabindex to enable selecting of links only */}
-        <button className="project-btn" tabindex="-1">
+        <button className="project-btn" tabIndex="-1">
           <a href={projectLink} target="_blank">
             visit site
           </a>
         </button>
         {/* add tabindex to enable selecting of links only */}
-        <button className="project-btn" tabindex="-1">
+        <button className="project-btn" tabIndex="-1">
           <a href={githubLink} target="_blank">
             github repo
           </a>
