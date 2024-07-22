@@ -6,7 +6,7 @@ function Nav({ isShown, onClose }) {
   // smooth scrolling to the correct section with improved offset height
   const handleClick = (e, targetId) => {
     e.preventDefault();
-    const navHeight = 32;
+    const navHeight = 15;
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       window.scrollTo({
