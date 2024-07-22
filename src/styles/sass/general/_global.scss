@@ -19,6 +19,7 @@ a {
 }
 a {
   color: inherit;
+  @include focus-default;
 }
 button {
   cursor: pointer;

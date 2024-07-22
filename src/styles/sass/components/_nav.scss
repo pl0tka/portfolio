@@ -3,17 +3,21 @@
   height: 0;
   overflow: hidden;
   transition: $nav-transition;
+  // nav elements should not be focusable when nav is not open
+  visibility: hidden;
 
   @include md-screen {
     display: block;
     height: auto;
     overflow: visible;
+    visibility: visible;
   }
 
   &-show {
     display: block;
     height: $nav-show-height;
     width: 100%;
+    visibility: visible;
   }
 
   &-list {
@@ -64,5 +68,7 @@
         border-color: $clr-primary;
       }
     }
+
+    @include focus-dark;
   }
 }

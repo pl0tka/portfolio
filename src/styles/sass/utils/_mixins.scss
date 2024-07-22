@@ -22,6 +22,25 @@
   }
 }
 
+// focus styles
+@mixin focus-default {
+  &:focus {
+    outline-color: $clr-secondary;
+    background-color: $clr-secondary-light;
+    color: $clr-primary;
+    border-radius: 0.2rem;
+  }
+}
+
+@mixin focus-dark {
+  &:focus {
+    outline-color: $clr-secondary;
+    background-color: $clr-primary;
+    color: $clr-secondary;
+    border-radius: 0.2rem;
+  }
+}
+
 // TEXT
 // hero
 @mixin text-hero-primary {
