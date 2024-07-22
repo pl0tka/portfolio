@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaBars } from 'react-icons/fa6';
 
 function NavToggler({ onToggle, isShown }) {
   const handleClick = () => {
@@ -7,7 +8,7 @@ function NavToggler({ onToggle, isShown }) {
 
   return (
     <button onClick={handleClick} className="header-toggler">
-      <i className="header-toggler-icon fa-solid fa-bars"></i>
+      <FaBars className="header-toggler-icon" />
     </button>
   );
 }

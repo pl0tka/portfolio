@@ -30,6 +30,9 @@
   }
 
   &-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 3rem;
     height: 3rem;
     padding: 0;
@@ -49,8 +52,6 @@
 
   &-toggler-icon {
     font-size: $font-size-lg;
-    // icon looks asymmetric without padding
-    padding-top: 0.1rem;
     color: inherit;
   }
 }
