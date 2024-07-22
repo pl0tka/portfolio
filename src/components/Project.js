@@ -9,6 +9,11 @@ function Project({ project }) {
     </span>
   ));
 
+  // remove focus from the element
+  const handleClick = (e) => {
+    e.target.blur();
+  };
+
   return (
     <article className="project">
       <div className="project-image-wrapper">
@@ -25,13 +30,13 @@ function Project({ project }) {
       <div className="project-btns-wrapper">
         {/* add tabindex to enable selecting of links only */}
         <button className="project-btn" tabIndex="-1">
-          <a href={projectLink} target="_blank">
+          <a href={projectLink} target="_blank" onClick={handleClick}>
             visit site
           </a>
         </button>
         {/* add tabindex to enable selecting of links only */}
         <button className="project-btn" tabIndex="-1">
-          <a href={githubLink} target="_blank">
+          <a href={githubLink} target="_blank" onClick={handleClick}>
             github repo
           </a>
         </button>

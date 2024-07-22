@@ -4,6 +4,11 @@ import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa6';
 function Footer() {
   const currentYear = new Date().getFullYear();
 
+  // remove focus from the button
+  const handleClick = (e) => {
+    e.currentTarget.blur();
+  };
+
   return (
     <footer className="footer">
       <div className="footer-icons">
@@ -11,6 +16,7 @@ function Footer() {
           className="footer-link"
           href="https://github.com/pl0tka"
           target="_blank"
+          onClick={handleClick}
         >
           <FaGithub />
         </a>
@@ -18,6 +24,7 @@ function Footer() {
           className="footer-link"
           href="https://www.linkedin.com/in/anastasiahuseva/"
           target="_blank"
+          onClick={handleClick}
         >
           <FaLinkedin />
         </a>
@@ -25,6 +32,7 @@ function Footer() {
           className="footer-link"
           href="mailto:huseva.a@gmail.com"
           target="_blank"
+          onClick={handleClick}
         >
           <FaEnvelope />
         </a>
