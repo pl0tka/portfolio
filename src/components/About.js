@@ -22,7 +22,7 @@ function About() {
           development to become a well-rounded full-stack developer. I’m a
           curious, friendly, and motivated person who loves creating beautiful
           things and exploring new technologies. Now, I’m looking forward to my
-          next adventure as a full-stack developer.
+          next adventure as a full-stack developer. 🚀
         </p>
         <p className="about-tech-stack">
           <span className="about-accent">My tech stack: </span>
