@@ -15,6 +15,13 @@
   }
 }
 
+// enabling hover effects for devices with hover support and fine pointers
+@mixin hover-fine-pointer {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
 // TEXT
 // hero
 @mixin text-hero-primary {

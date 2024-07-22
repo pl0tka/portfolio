@@ -42,8 +42,10 @@
     font-weight: $font-weight-medium;
     border-bottom: border-style(transparent);
 
-    &:hover {
-      border-bottom-color: $clr-primary;
+    @include hover-fine-pointer {
+      &:hover {
+        border-bottom-color: $clr-primary;
+      }
     }
   }
 
@@ -55,10 +57,12 @@
     padding: $link-contact-padding;
     transition: $transition;
 
-    &:hover {
-      background-color: $clr-primary;
-      color: $clr-secondary;
-      border-color: $clr-primary;
+    @include hover-fine-pointer {
+      &:hover {
+        background-color: $clr-primary;
+        color: $clr-secondary;
+        border-color: $clr-primary;
+      }
     }
   }
 }

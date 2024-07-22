@@ -86,12 +86,14 @@
     border-radius: 0;
     padding: $project-btn-padding-default;
 
-    &:hover {
-      background-color: $clr-primary;
-      color: $clr-secondary;
-      border: border-style($clr-primary);
-      border-radius: $border-radius;
-      padding: $project-element-padding;
+    @include hover-fine-pointer {
+      &:hover {
+        background-color: $clr-primary;
+        color: $clr-secondary;
+        border: border-style($clr-primary);
+        border-radius: $border-radius;
+        padding: $project-element-padding;
+      }
     }
   }
 }

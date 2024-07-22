@@ -44,9 +44,11 @@
       display: none;
     }
 
-    &:hover {
-      background-color: $clr-primary;
-      color: $clr-secondary;
+    @include hover-fine-pointer {
+      &:hover {
+        background-color: $clr-primary;
+        color: $clr-secondary;
+      }
     }
   }
 
