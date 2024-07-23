@@ -15,7 +15,7 @@ const projects = [
   {
     title: 'Memory Cards Game',
     desc: 'A memory game with customizable card counts, persistent dark mode, and data fetched from an external API.',
-    techlonogies: ['React.js', 'HTML', 'CSS', 'Sass'],
+    techlonogies: ['React.js', 'HTML', 'CSS'],
     img: memoryCards,
     projectLink: 'https://fun-memory-cards.netlify.app/',
     githubLink: 'https://github.com/pl0tka/memory-cards',
